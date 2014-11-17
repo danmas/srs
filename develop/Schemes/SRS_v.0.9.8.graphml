@@ -1229,7 +1229,7 @@ dist_max_III = torp_params_III.dist_execution;]]></data>
       <data key="d5"><![CDATA[package srs {]]></data>
       <data key="d6">
         <y:SVGNode>
-          <y:Geometry height="50.00001525878906" width="211.98219299316406" x="-2277.710783474604" y="1812.128604823879"/>
+          <y:Geometry height="50.00001525878906" width="211.98219299316406" x="-2059.739442749791" y="1672.6738223171437"/>
           <y:Fill color="#CCCCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.609375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="211.98219299316406" x="0.0" y="13.195320129394531">Класс Main</y:NodeLabel>
@@ -1432,12 +1432,10 @@ main = this;
       </data>
     </node>
     <node id="n78">
-      <data key="d4"><![CDATA[SI_END]]></data>
-      <data key="d5"><![CDATA[   } //-- конец класса
-} //-- крнец пакета]]></data>
+      <data key="d4"><![CDATA[SH_END]]></data>
       <data key="d6">
         <y:SVGNode>
-          <y:Geometry height="35.789434663610166" width="93.35719299316406" x="-1198.940308507441" y="2453.7915315712103"/>
+          <y:Geometry height="35.789434663610166" width="93.35719299316406" x="-1198.940308507441" y="2461.512719805947"/>
           <y:Fill color="#CCCCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="36.09765625" x="28.62976837158203" y="8.544131394305168">конец</y:NodeLabel>
@@ -2234,7 +2232,7 @@ public static function getWhiteStore():Store {
 ]]></data>
       <data key="d6">
         <y:SVGNode>
-          <y:Geometry height="121.46100468049724" width="219.66208980872443" x="-1262.0927569152204" y="2257.6840569472342"/>
+          <y:Geometry height="121.46100468049724" width="219.66208980872443" x="-1262.0927569152204" y="2265.405245181971"/>
           <y:Fill color="#CCCCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="219.66208980872443" x="0.0" y="50.18362734024868">тело</y:NodeLabel>
@@ -13946,7 +13944,7 @@ main.addChild(c2);
       <data key="d4"><![CDATA[DG_BEG]]></data>
       <data key="d6">
         <y:SVGNode>
-          <y:Geometry height="64.53585815429688" width="56.560157775878906" x="-2199.9997658659613" y="1684.6620289941377"/>
+          <y:Geometry height="64.53585815429688" width="56.560157775878906" x="-2199.9997658659613" y="1692.865251494534"/>
           <y:Fill color="#CCCCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="74.154296875" x="-8.797069549560547" y="68.53585815429688">Сборка Main<y:LabelModel>
@@ -14544,7 +14542,7 @@ main.addChild(c2);
     </node>
     <node id="n737">
       <data key="d4"><![CDATA[WR_RES_FILE]]></data>
-      <data key="d5"><![CDATA[C:\ERV\WRK\srs\develop\src\Main.as]]></data>
+      <data key="d5"><![CDATA[/src/srs/Main.as]]></data>
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.dataBase">
           <y:Geometry height="50.00001525878906" width="148.682197954262" x="-1976.9152457224911" y="1812.128604823879"/>
@@ -14587,7 +14585,7 @@ main.addChild(c2);
           <y:Geometry height="64.53585815429688" width="56.560157775878906" x="-1931.0370148908173" y="4136.346310670985"/>
           <y:Fill color="#CCCCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="45.94140625" x="5.309375762939453" y="68.53585815429688">Начало<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="113.095703125" x="-28.267772674560547" y="68.53585815429688">Сборка класса Ship<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -14821,7 +14819,7 @@ main.addChild(c2);
       <data key="d4"><![CDATA[START_ACTS]]></data>
       <data key="d6">
         <y:SVGNode>
-          <y:Geometry height="108.17981202122769" width="189.0429473498143" x="-3793.477645965099" y="2064.526532171568"/>
+          <y:Geometry height="108.17981202122769" width="189.0429473498143" x="-2687.4287206561226" y="1671.0432745610685"/>
           <y:Fill color="#CCCCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.1513671875" modelName="custom" textColor="#000000" visible="true" width="74.8955078125" x="57.073719768657156" y="112.17981202122769">Начать акт<y:LabelModel>
@@ -14842,10 +14840,112 @@ main.addChild(c2);
       <data key="d4"><![CDATA[DG_BEG]]></data>
       <data key="d6">
         <y:SVGNode>
-          <y:Geometry height="64.53585815429688" width="56.560157775878906" x="-3524.9381805977177" y="2080.296441695495"/>
+          <y:Geometry height="64.53585815429688" width="56.560157775878906" x="-2418.8892552887414" y="1686.8131840849958"/>
           <y:Fill color="#CCCCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="74.154296875" x="-8.797069549560547" y="68.53585815429688">Сборка Main<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="-0.5" nodeRatioX="0.0" nodeRatioY="0.5" offsetX="0.0" offsetY="4.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="8"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n754">
+      <data key="d4"><![CDATA[SI_BEG]]></data>
+      <data key="d5"><![CDATA[package srs {]]></data>
+      <data key="d6">
+        <y:GenericNode configuration="com.yworks.flowchart.internalStorage">
+          <y:Geometry height="55.804717792552765" width="167.39241346185827" x="-2255.415893708951" y="1806.3239022901153"/>
+          <y:Fill color="#E5FFFF" color2="#E5FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="2.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="66.009765625" x="50.691323918429134" y="18.551772958776382">Класс Main<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n755">
+      <data key="d4"><![CDATA[SI_END]]></data>
+      <data key="d5"><![CDATA[   } //-- конец класса
+} //-- крнец пакета]]></data>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="31.008871655792063" width="40.0" x="-996.700587986858" y="2240.3435154146587"/>
+          <y:Fill color="#E5FFFF" color2="#E5FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" textColor="#000000" visible="true" width="4.0" x="18.0" y="13.504435827896032">
+            <y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="triangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n756">
+      <data key="d4"><![CDATA[DG_BEG]]></data>
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="64.53585815429688" width="56.560157775878906" x="-2465.0422987383463" y="1823.9752965127068"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="113.095703125" x="-28.267772674560547" y="68.53585815429688">Сборка класса Ship<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="-0.5" nodeRatioX="0.0" nodeRatioY="0.5" offsetX="0.0" offsetY="4.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="8"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n757">
+      <data key="d4"><![CDATA[DG_BEG]]></data>
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="64.53585815429688" width="56.560157775878906" x="-427.46859472209553" y="1673.387188048303"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="155.125" x="-49.28242111206055" y="68.53585815429688">Сборка класса Situation1x1<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="-0.5" nodeRatioX="0.0" nodeRatioY="0.5" offsetX="0.0" offsetY="4.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="8"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n758">
+      <data key="d4"><![CDATA[DG_BEG]]></data>
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="64.53585815429688" width="56.560157775878906" x="-2621.187325869155" y="1877.8917826169113"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="155.125" x="-49.28242111206055" y="68.53585815429688">Сборка класса Situation1x1<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -15653,14 +15753,14 @@ main.addChild(c2);
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e69" source="n69" target="n737">
+    <edge id="e69" source="n754" target="n737">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="-5.888119589520102" ty="5.772401429175034"/>
+          <y:Path sx="36.25013509364135" sy="-0.15192992202537425" tx="-5.888119589520102" ty="5.772401429175034"/>
           <y:LineStyle color="#000000" type="dotted" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="51.63085072193917" y="29.226506005411238">
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="67.93125840207563" y="30.818047372254114">
             <y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
@@ -15673,7 +15773,7 @@ main.addChild(c2);
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e70" source="n69" target="n74">
+    <edge id="e70" source="n754" target="n74">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-13.802960066008382"/>
@@ -23544,7 +23644,7 @@ main.addChild(c2);
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e715" source="n707" target="n69">
+    <edge id="e715" source="n707" target="n754">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -23815,6 +23915,52 @@ main.addChild(c2);
       </data>
     </edge>
     <edge id="e742" source="n752" target="n753">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e743" source="n77" target="n755">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="-976.700587986858" y="2190.967025432843"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e744" source="n739" target="n208">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e745" source="n757" target="n88">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e746" source="n752" target="n756">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
