@@ -407,7 +407,7 @@ time_last_move = cur_time;
 	//-- выход
 	
 //<DG2J code_mark="n77:SH_BEG" >
-//null
+null
 //</DG2J>
  
 		//-- тело
@@ -1145,7 +1145,7 @@ public static function getWhiteStore():Store {
 //null
 //</DG2J>
 
-	//} 
+//	} 
 
 	//-- 
             
