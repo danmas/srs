@@ -1,13 +1,13 @@
 
 //-- Класс Main
 
-//<DG2J code_mark="n754:SI_BEG" >
+//<DG2J code_mark="n751:SI_BEG" >
 package srs {
 //</DG2J>
 
 	//-- упоминание о DrakonGen
 	
-//<DG2J code_mark="n74:ACTION" >
+//<DG2J code_mark="n73:ACTION" >
    /**
     * Этот текст сгенерирован программой DrakonGen
     * @author Erv
@@ -17,7 +17,7 @@ package srs {
  
 	//-- ссылки
 	
-//<DG2J code_mark="n79:ACTION" >
+//<DG2J code_mark="n77:ACTION" >
 	/**
 	 * Programming ActionScript 3.0 for Flash
 	 * http://help.adobe.com/en_US/ActionScript/3.0_ProgrammingAS3/WS5b3ccc516d4fbf351e63e3d118a9b8cbfe-7ff7.html
@@ -38,7 +38,7 @@ package srs {
  
 	//-- imports//-- SWF
 	
-//<DG2J code_mark="n72:ACTION" >
+//<DG2J code_mark="n71:ACTION" >
 	import flash.display.DisplayObject;
 	import flash.geom.Rectangle;
 	import flash.display.Sprite;
@@ -65,7 +65,7 @@ package srs {
  
 	//-- class Main
 	
-//<DG2J code_mark="n73:ACTION" >
+//<DG2J code_mark="n72:ACTION" >
 /**
 	 * ...
 	 * @author Erv
@@ -75,7 +75,7 @@ package srs {
  
 	//-- константы
 	
-//<DG2J code_mark="n80:ACTION" >
+//<DG2J code_mark="n78:ACTION" >
 public static const SCREEN_WIDTH:int = 1000; // 800;	
 public static const SCREEN_HEIGHT:int = 700; // 500;		
 public static const STOPED:int = 0;
@@ -92,7 +92,7 @@ public static const ENTER:int = 13;
  
 	//-- переменные
 	
-//<DG2J code_mark="n75:ACTION" >
+//<DG2J code_mark="n74:ACTION" >
 	private var my_ship:Ship;
 	private var redTorpedos:Array;
 	private var whiteTorpedos:Array;
@@ -134,31 +134,28 @@ public function Main():void {
  
 		//-- тело
 		
-//<DG2J code_mark="n76:ACTION" >
+//<DG2J code_mark="n75:ACTION" >
 if (stage) init();
 else addEventListener(Event.ADDED_TO_STAGE, init);
 main = this;
 
 //</DG2J>
  
-		//-- выход
+		//-- //--         
 		
-//<DG2J code_mark="n71:SH_END" >
-
-
+//<DG2J code_mark="n756:SH_END" >
+}
 //</DG2J>
-
-	} 
 
 	//-- handleEnterFrame()
 	
-//<DG2J code_mark="n165:SH_BEG" >
+//<DG2J code_mark="n163:SH_BEG" >
 protected function handleEnterFrame(e:Event):void {
 //</DG2J>
  
 		//-- проверяем не //-- закончилась ли игра
 		
-//<DG2J code_mark="n178:ACTION" >
+//<DG2J code_mark="n175:ACTION" >
 dt = this.time_last_move
 			//-- провека конца игры
 			var ret:int = scenario.checkGameOver();
@@ -171,25 +168,25 @@ dt = this.time_last_move
  
 		//-- процесс запущен?
 		if(
-//<DG2J code_mark="n166:IF" >
+//<DG2J code_mark="n164:IF" >
 isStarted()
 //</DG2J>
 ) {
 			//-- текущее время
 			
-//<DG2J code_mark="n168:ACTION" >
+//<DG2J code_mark="n166:ACTION" >
 var cur_time:int =
 //</DG2J>
  
 			//-- getTimer()
 			
-//<DG2J code_mark="n169:ACTION" >
+//<DG2J code_mark="n167:ACTION" >
 getTimer();
 //</DG2J>
  
 			//-- вычисляем суммарное //-- время жизни
 			
-//<DG2J code_mark="n170:ACTION" >
+//<DG2J code_mark="n168:ACTION" >
 var dt:int = cur_time - time_last_move;
 			time_life += dt;
 			Statistic.time_game_sec = time_life / 1000.;
@@ -197,13 +194,13 @@ var dt:int = cur_time - time_last_move;
  
 			//-- пора обрабатывать медленное событие?
 			if(
-//<DG2J code_mark="n171:IF" >
+//<DG2J code_mark="n169:IF" >
 cur_time - time_last_slow_loop > Settings.SLOW_LOOP_INTERVAL_MS
 //</DG2J>
 ) {
 				//-- выводим информацию //-- по моему судну
 				
-//<DG2J code_mark="n173:ACTION" >
+//<DG2J code_mark="n171:ACTION" >
 if (getMyShip() != null)
 					{
 						getInformer().setSpeed(my_ship.getPhisVelocity());
@@ -232,7 +229,7 @@ if (getMyShip() != null)
  
 				//-- для всех торпед//-- прощитываем AI
 				
-//<DG2J code_mark="n174:ACTION" >
+//<DG2J code_mark="n172:ACTION" >
 					for each (var t:Torped in redTorpedos)
 					{
 						t.AI_step_I();
@@ -250,7 +247,7 @@ if (getMyShip() != null)
  
 				//-- для всех судов//-- прощитываем AI
 				
-//<DG2J code_mark="n175:ACTION" >
+//<DG2J code_mark="n173:ACTION" >
 for each (var s:Ship in redShips)
 					{
 						//if(!s.getUnderControl()) {
@@ -273,7 +270,7 @@ for each (var s:Ship in redShips)
  
 				//-- запоминаем время//-- медленного цикла
 				
-//<DG2J code_mark="n176:ACTION" >
+//<DG2J code_mark="n174:ACTION" >
 time_last_slow_loop = cur_time;
 //</DG2J>
  
@@ -281,19 +278,19 @@ time_last_slow_loop = cur_time;
 			}
 			//-- пора обрабатывать быстрое событие?
 			if(
-//<DG2J code_mark="n179:IF" >
+//<DG2J code_mark="n176:IF" >
 cur_time - time_last_move > Settings.MOVE_INTERVAL_MS
 //</DG2J>
 ) {
 				//-- есть мой корабль?
 				if(
-//<DG2J code_mark="n180:IF" >
+//<DG2J code_mark="n177:IF" >
 my_ship != null
 //</DG2J>
 ) {
 					//-- выполняем быструю компоненту AI//-- и двигаем мой корабль
 					
-//<DG2J code_mark="n181:ACTION" >
+//<DG2J code_mark="n178:ACTION" >
 						my_ship.AI_fast_loop();
 						my_ship.move();
 
@@ -301,7 +298,7 @@ my_ship != null
  
 					//-- проверяем столкновение //-- с берегом
 					
-//<DG2J code_mark="n184:ACTION" >
+//<DG2J code_mark="n181:ACTION" >
 	if (scenario.getObstruction() != null)
 						{
 							if (my_ship.testCrash(scenario.getObstruction()))
@@ -313,7 +310,7 @@ my_ship != null
  
 					//-- запоминаем время выхода //-- из порта
 					
-//<DG2J code_mark="n185:ACTION" >
+//<DG2J code_mark="n182:ACTION" >
 if (my_ship != null)
 						{
 							if (my_ship.testCrash(scenario.getPortLine()))
@@ -328,7 +325,7 @@ if (my_ship != null)
 				}
 				//-- для всех торпед и судов//-- выполняем быструю компоненту AI
 				
-//<DG2J code_mark="n186:ACTION" >
+//<DG2J code_mark="n183:ACTION" >
 					//-- move all
 					for each (var t:Torped in redTorpedos)
 					{
@@ -378,7 +375,7 @@ if (my_ship != null)
  
 				//-- если нужно рисуем //-- все вражеские суда
 				
-//<DG2J code_mark="n188:ACTION" >
+//<DG2J code_mark="n185:ACTION" >
 					if (!Settings.DRAW_REAL_WORLD)
 					{
 						drawEnemyShipsAsTarget();
@@ -387,7 +384,7 @@ if (my_ship != null)
  
 				//-- запоминаем время//-- последнего движения
 				
-//<DG2J code_mark="n187:ACTION" >
+//<DG2J code_mark="n184:ACTION" >
 time_last_move = cur_time;
 //</DG2J>
  
@@ -395,24 +392,21 @@ time_last_move = cur_time;
 			}
 		} else {
 		}
-		//-- выход
+		//-- //--         
 		
-//<DG2J code_mark="n177:SH_END" >
-
-
+//<DG2J code_mark="n757:SH_END" >
+}
 //</DG2J>
-
-	} 
 
 	//-- выход
 	
-//<DG2J code_mark="n77:SH_BEG" >
+//<DG2J code_mark="n76:SH_BEG" >
 null
 //</DG2J>
  
 		//-- тело
 		
-//<DG2J code_mark="n81:ACTION" >
+//<DG2J code_mark="n79:ACTION" >
 private function init(e:Event = null):void {
 	removeEventListener(Event.ADDED_TO_STAGE, init);
 	//trace('Hello! stage.frameRate' + stage.frameRate);
@@ -1139,18 +1133,16 @@ public static function getWhiteStore():Store {
 
 //</DG2J>
  
-		//-- конец
+		//-- //--         
 		
-//<DG2J code_mark="n78:SH_END" >
+//<DG2J code_mark="n758:SH_END" >
 //null
 //</DG2J>
-
-//	} 
 
 	//-- 
             
 	
-//<DG2J code_mark="n755:SI_END" >
+//<DG2J code_mark="n752:SI_END" >
    } //-- конец класса
 } //-- крнец пакета
 //</DG2J>
