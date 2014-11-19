@@ -198,7 +198,7 @@ var dt:int = cur_time - time_last_move;
 cur_time - time_last_slow_loop > Settings.SLOW_LOOP_INTERVAL_MS
 //</DG2J>
 ) {
-				//-- выводим информацию //-- по моему судну
+				//-- выводим информацию //-- по моему
 				
 //<DG2J code_mark="n171:ACTION" >
 if (getMyShip() != null)
@@ -1136,7 +1136,7 @@ public static function getWhiteStore():Store {
 		//-- //--         
 		
 //<DG2J code_mark="n758:SH_END" >
-//null
+null
 //</DG2J>
 
 	//-- 

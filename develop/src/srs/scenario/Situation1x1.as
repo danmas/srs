@@ -1,9 +1,8 @@
 
 //-- Класс Ситуация 1x1
 
-//<DG2J code_mark="n86:SI_BEG" >
-
-	
+//<DG2J code_mark="n774:SI_BEG" >
+null
 //</DG2J>
 
 	//-- упоминание о DrakonGen
@@ -128,10 +127,9 @@ enemy_dist_change =
 Settings.DC_UNKNOWN;
 //</DG2J>
  
-		//-- выход
+		//-- //--         
 		
-//<DG2J code_mark="n89:SH_END" >
-return;
+//<DG2J code_mark="n760:SH_END" >
 }
 //</DG2J>
 
@@ -291,10 +289,9 @@ situation =
 Settings.SIT_ERROR_DETEСTION;
 //</DG2J>
  
-								//-- выход
+								//-- //--         
 								
-//<DG2J code_mark="n159:SH_END" >
-return;
+//<DG2J code_mark="n762:SH_END" >
 }
 //</DG2J>
 
@@ -496,10 +493,9 @@ Settings.DC_UNKNOWN;
  
 			}
 		}
-		//-- выход
+		//-- //--         
 		
-//<DG2J code_mark="n94:SH_END" >
-return;
+//<DG2J code_mark="n761:SH_END" >
 }
 //</DG2J>
 
@@ -551,9 +547,9 @@ if (danger_torp != null) {
 
 //</DG2J>
  
-		//-- //--             
+		//-- ret_code
 		
-//<DG2J code_mark="n157:SH_END" >
+//<DG2J code_mark="n796:SH_END" >
 return ret_code;
 }
 //</DG2J>
