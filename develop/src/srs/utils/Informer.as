@@ -26,7 +26,7 @@ package srs.utils
 		protected const FIELD_TEXT_SIZE:int = 20;
 		protected const FIELD_TEXT_COLOR:uint = 0xFFFFFF;		
 		protected const FIELD_TEXT_BGCOLOR:uint = 0x1E90FF;		
-		protected const FIELD_ALPHA:Number = 0.8;
+		protected const FIELD_ALPHA:Number = 0.5;
 		
 		protected const R_LBL_WIDTH:int = 150;
 		protected const R_FIELD_WIDTH:int = 100;
@@ -34,14 +34,14 @@ package srs.utils
 		protected const R_FIELD_TEXT_SIZE:int = 20;
 		protected const R_FIELD_TEXT_COLOR:uint = 0xFFFF00;		
 		protected const R_FIELD_TEXT_BGCOLOR:uint = 0x1E90FF;		
-		protected const R_ALPHA:Number = 0.8;		
+		protected const R_ALPHA:Number = 0.4;		
 
 		protected const TF_FIELD_HEIGHT:int = 200;
 		protected const TF_FIELD_WIDTH:int = 600;
 		protected const TF_FIELD_TEXT_SIZE:int = 20;
 		protected const TF_FIELD_TEXT_COLOR:uint = 0xFFFF00;		
 		protected const TF_FIELD_TEXT_BGCOLOR:uint = 0x1E90FF;		
-		protected const TF_FIELD_ALPHA:Number = 0.8;
+		protected const TF_FIELD_ALPHA:Number = 0.4;
 		
 		protected var main:Main = null;
 		

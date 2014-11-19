@@ -18,7 +18,7 @@ null
 	//-- package//-- imports
 	
 //<DG2J code_mark="n90:ACTION" >
-package  srs.AI
+package  srs.scenario
 {
    import flash.display.Sprite;
    import flash.geom.Point;
