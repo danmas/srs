@@ -158,7 +158,7 @@ torp_params_III = Main.getRedStore().getParams_III();
 				AI_on_change_situation(); 
 			} else {
 			}
-			//-- Принятие решения//-- 
+			//-- Принятие решения на маневр
 			AI_on_situation(); 
 		}
 		//-- //--             
@@ -214,12 +214,51 @@ torp_params_III = Main.getRedStore().getParams_III();
 			}
 			//-- ситуация
 			switch(situation.situation ) {
-				//-- ОПРЕДЕЛЕНА ОШИБОЧНО
-				case Settings.SIT_ERROR_DETEСTION:
-					//-- маневр
-					manevr_state = 
-					//-- НЕ ОПРЕДЕЛЕН
-					MANEVR_UNKNOWN; 
+				//-- ВРАГ НА ДИСТ.ОГНЯ
+				case Settings.SIT_ENEMY_ON_FIRE_DISTANCE:
+					//-- Роль защитник конвоя?
+					if(isRoleConvoyDefender()) {
+						//-- характер агрессивный?
+						if(pepper_AI == AI_PEPPER_AGGRESSIVE) {
+							//-- маневр
+							manevr_state = 
+							//-- АТАКА АГРЕССИВНАЯ
+							MANEVR_ATTACK_AGGRESSIVE; 
+						} else {
+							//-- характер скрытный или трусливый?
+							if(pepper_AI == AI_PEPPER_RESERVED || pepper_AI == AI_PEPPER_COWARD) {
+								//-- маневр
+								manevr_state = 
+								//-- АТАКА ТИХАЯ
+								MANEVR_ATTACK_SILENT; 
+							} else {
+								//-- маневр
+								manevr_state = 
+								//-- НЕ ОПРЕДЕЛЕН
+								MANEVR_UNKNOWN; 
+							}
+						}
+					} else {
+						//-- маневр
+						manevr_state = 
+						//-- БЕГСТВО
+						MANEVR_RUNAWAY; 
+						//-- характер
+						switch(pepper_AI) {
+							//-- СКРЫТНЫЙ
+							case AI_PEPPER_RESERVED:
+								//-- маневр
+								manevr_state = 
+								//-- ТИХОЕ БЕГСТВО
+								MANEVR_RUNAWAY; 
+							//-- ТРУСЛИВЫЙ
+							case AI_PEPPER_COWARD:
+								//-- маневр
+								manevr_state = 
+								//-- ПАНИЧЕСКОЕ БЕГСТВО
+								MANEVR_PANIC_RUNAWAY; 
+						}
+					}
 					//-- break
 					break; 
 				//-- ВРАГ ОБНАРУЖЕН
@@ -309,53 +348,6 @@ addWayPoint(p.x, p.y, Constants.WP_CONVOY);
 					}
 					//-- break
 					break; 
-				//-- ВРАГ НА ДИСТ.ОГНЯ
-				case Settings.SIT_ENEMY_ON_FIRE_DISTANCE:
-					//-- Роль защитник конвоя?
-					if(isRoleConvoyDefender()) {
-						//-- характер агрессивный?
-						if(pepper_AI == AI_PEPPER_AGGRESSIVE) {
-							//-- маневр
-							manevr_state = 
-							//-- АТАКА АГРЕССИВНАЯ
-							MANEVR_ATTACK_AGGRESSIVE; 
-						} else {
-							//-- характер скрытный или трусливый?
-							if(pepper_AI == AI_PEPPER_RESERVED || pepper_AI == AI_PEPPER_COWARD) {
-								//-- маневр
-								manevr_state = 
-								//-- АТАКА ТИХАЯ
-								MANEVR_ATTACK_SILENT; 
-							} else {
-								//-- маневр
-								manevr_state = 
-								//-- НЕ ОПРЕДЕЛЕН
-								MANEVR_UNKNOWN; 
-							}
-						}
-					} else {
-						//-- маневр
-						manevr_state = 
-						//-- БЕГСТВО
-						MANEVR_RUNAWAY; 
-						//-- характер
-						switch(pepper_AI) {
-							//-- ТРУСЛИВЫЙ
-							case AI_PEPPER_COWARD:
-								//-- маневр
-								manevr_state = 
-								//-- ПАНИЧЕСКОЕ БЕГСТВО
-								MANEVR_PANIC_RUNAWAY; 
-							//-- СКРЫТНЫЙ
-							case AI_PEPPER_RESERVED:
-								//-- маневр
-								manevr_state = 
-								//-- ТИХОЕ БЕГСТВО
-								MANEVR_RUNAWAY; 
-						}
-					}
-					//-- break
-					break; 
 				//-- ВРАГ РЯДОМ
 				case Settings.SIT_ENEMY_CLOSE:
 					//-- Роль защитник конвоя?
@@ -372,41 +364,33 @@ addWayPoint(p.x, p.y, Constants.WP_CONVOY);
 					}
 					//-- break
 					break; 
+				//-- ОПРЕДЕЛЕНА ОШИБОЧНО
+				case Settings.SIT_ERROR_DETEСTION:
+					//-- маневр
+					manevr_state = 
+					//-- НЕ ОПРЕДЕЛЕН
+					MANEVR_UNKNOWN; 
+					//-- break
+					break; 
 			}
 		}
 		//-- //--             
 		}
-	//-- AI_on_situation()
+	//-- Принятие решения на маневр
 	public function AI_on_situation():void { 
 		//-- маневр
 		switch(manevr_state) {
-			//-- АТАКА АГРЕССИВНАЯ
-			case MANEVR_ATTACK_AGGRESSIVE:
+			//-- ПОИСК ВРАГА АГРЕСС
+			case MANEVR_TARGET_SEARCH_AGGRESSIVE:
 				//-- двигаемся с максимальной скоростью
 				setPower(POWER_6); 
-				//-- Двигаемся в противоположном направлении от цели
+				//-- Двигаемся в предполагаемом направлении на цель
 				//-- вычисляем направление на цель
 var angle_deg:Number = Utils.calcAngleBattleDeg(position_gm, situation.target.ship.getPosition());
-startMoveInDirectionDeg(angle_deg+180.);
+startMoveInDirectionDeg(angle_deg);
  
-				//-- Открываем огонь
-				AI_torped_fire(); 
-				//-- Агрессивная атака. Движемся на врага с максимальной скоростью и открываем огонь.
-				showInfoMessageForSelected("Агрессивная атака. Движемся на врага с максимальной скоростью и открываем огонь.");
- 
-				//-- break
-				break; 
-			//-- ПАНИЧЕСКОЕ БЕГСТВО
-			case MANEVR_PANIC_RUNAWAY:
-				//-- двигаемся с максимальной скоростью
-				setPower(POWER_6); 
-				//-- Двигаемся в противоположном направлении от цели
-				//-- вычисляем направление на цель
-var angle_deg:Number = Utils.calcAngleBattleDeg(position_gm, situation.target.ship.getPosition());
-startMoveInDirectionDeg(angle_deg+180.);
- 
-				//-- Паническое бегство. Удираем в противоположном направлении от врага.
-				showInfoMessageForSelected("Паническое бегство. Удираем в противоположном направлении от врага.");
+				//-- Агрес поиск. Двигаемся в предполагаемом направлении на цель
+				showInfoMessageForSelected("Агрес поиск. Двигаемся в предполагаемом направлении на цель." + angle_deg.toFixed(3));
  
 				//-- break
 				break; 
@@ -436,8 +420,20 @@ startMoveInDirectionDeg(angle_deg+180.);
  
 				//-- break
 				break; 
-			//-- НЕ ОПРЕДЕЛЕН
-			case MANEVR_UNKNOWN:
+			//-- АТАКА АГРЕССИВНАЯ
+			case MANEVR_ATTACK_AGGRESSIVE:
+				//-- двигаемся с максимальной скоростью
+				setPower(POWER_6); 
+				//-- Двигаемся в противоположном направлении от цели
+				//-- вычисляем направление на цель
+var angle_deg:Number = Utils.calcAngleBattleDeg(position_gm, situation.target.ship.getPosition());
+startMoveInDirectionDeg(angle_deg+180.);
+ 
+				//-- Открываем огонь
+				AI_torped_fire(); 
+				//-- Агрессивная атака. Движемся на врага с максимальной скоростью и открываем огонь.
+				showInfoMessageForSelected("Агрессивная атака. Движемся на врага с максимальной скоростью и открываем огонь.");
+ 
 				//-- break
 				break; 
 			//-- ТИХОЕ БЕГСТВО
@@ -462,6 +458,10 @@ startMoveInDirectionDeg(angle_deg+180.);
 				//-- Тихое бегство. Тихо двигаемся в противоположном направлении от врага.
 				showInfoMessageForSelected("Тихое бегство. Тихо двигаемся в противоположном направлении от врага.");
  
+				//-- break
+				break; 
+			//-- НЕ ОПРЕДЕЛЕН
+			case MANEVR_UNKNOWN:
 				//-- break
 				break; 
 			//-- ПОИСК ВРАГА ТИХИЙ
@@ -502,17 +502,17 @@ startMoveInDirectionDeg(angle_deg);
  
 				//-- break
 				break; 
-			//-- ПОИСК ВРАГА АГРЕСС
-			case MANEVR_TARGET_SEARCH_AGGRESSIVE:
+			//-- ПАНИЧЕСКОЕ БЕГСТВО
+			case MANEVR_PANIC_RUNAWAY:
 				//-- двигаемся с максимальной скоростью
 				setPower(POWER_6); 
-				//-- Двигаемся в предполагаемом направлении на цель
+				//-- Двигаемся в противоположном направлении от цели
 				//-- вычисляем направление на цель
 var angle_deg:Number = Utils.calcAngleBattleDeg(position_gm, situation.target.ship.getPosition());
-startMoveInDirectionDeg(angle_deg);
+startMoveInDirectionDeg(angle_deg+180.);
  
-				//-- Агрес поиск. Двигаемся в предполагаемом направлении на цель
-				showInfoMessageForSelected("Агрес поиск. Двигаемся в предполагаемом направлении на цель." + angle_deg.toFixed(3));
+				//-- Паническое бегство. Удираем в противоположном направлении от врага.
+				showInfoMessageForSelected("Паническое бегство. Удираем в противоположном направлении от врага.");
  
 				//-- break
 				break; 
@@ -729,7 +729,7 @@ ret_code += " "+enemy_dist_change;
 */ 
 		//-- //--             
 		}
-	//-- AI_torped_fire()
+	//-- Открываем огонь
 				/**
 			 * 
 			 * Выбор торпеды
@@ -915,7 +915,7 @@ main.addChild(c2);
 		}
 		//-- //--             
 		}
-	//-- fire_in_direction()
+	//-- выстрел в направлении движения
 	public function fire_in_direction(_weapon_select:int, dir_deg:Number):Torped {
  
 		//-- тело процедуры

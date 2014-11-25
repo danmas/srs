@@ -4,7 +4,7 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="bin\SRS v.06.0 SC1x1.swf" />
+    <movie path="bin\SRS_v.0.8.1_Test.swf" />
     <movie fps="30" />
     <movie width="1000" />
     <movie height="800" />
